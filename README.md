@@ -25,19 +25,29 @@ More screenshots in [`pictures/`](pictures/).
 - **Extensible rules**: easy to add new signals, categories, or heuristics.
 - **Privacy-minded by default**: keep data local where possible; collect only what you need.
 - **Modular design**: core logic separated from UI to simplify iteration.
+- **Retrained ML pipeline**: latest training run reached **98% accuracy** with teammate collaboration.
 
 ## Tech stack
 
 - **Language**: Kotlin
 - **Build**: Gradle (Kotlin DSL)
 - **UI**: Android (Jetpack components as used in the project)
-- **ML**: optional pipeline notebooks (if present in your fork) for experimentation
+- **ML**: DistilBERT training + ONNX conversion pipeline in `model_training/`
 
 ## Project structure
 
 - **`app/`**: Android application module
 - **`gradle/`**: Gradle wrapper and version catalog/config
 - **`pictures/`**: screenshots used by this README
+- **`model_training/`**: training, testing, and ONNX export notebooks/scripts
+
+## Model training update
+
+- The model was retrained with support from teammates and reached **98% accuracy** in the latest run.
+- Training and export artifacts are now tracked in [`model_training/`](model_training/):
+  - `Distilbert_training_and_testing.ipynb`
+  - `Onnx_model.ipynb`
+  - `onnx_model.py`
 
 ## Getting started (development)
 
